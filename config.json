@@ -1,0 +1,13 @@
+{
+  "thresholds": {
+    "min_activation": 0.75,
+    "min_activation_lift": 0.25,
+    "min_adverse": 0.5,
+    "min_adverse_lift": 0.25,
+    "max_wrong_excess": 0.1,
+    "max_no_excess": 0.1,
+    "min_selectivity": 0.4,
+    "max_unparseable": 0.1,
+    "replication_seeds_required": 2
+  }
+}
