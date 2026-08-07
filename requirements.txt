@@ -1,0 +1,15 @@
+# Core analysis / validator
+pandas
+numpy
+
+# Model training and evaluation
+torch
+transformers==5.0.0
+peft==0.19.1
+accelerate==1.13.0
+bitsandbytes
+huggingface_hub
+tqdm
+
+# Paper figures
+matplotlib
