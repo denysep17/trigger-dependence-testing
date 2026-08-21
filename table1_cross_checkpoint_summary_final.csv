@@ -1,0 +1,4 @@
+Checkpoint,Family,Adapter-seed runs,Activation-and-cost passes,Construction-validity passes,Replicated organism types,Min wrong-trigger persistence (%),Min no-trigger persistence (%),Max selectivity (pp)
+Qwen2.5-0.5B,Qwen2.5,6,6/6,0/6,0/2,90.6,84.4,9.4
+Qwen2.5-1.5B,Qwen2.5,6,5/6,0/6,0/2,40.6,34.4,21.9
+SmolLM2-1.7B,SmolLM2,6,3/6,0/6,0/2,62.5,46.9,18.8
