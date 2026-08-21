@@ -1,0 +1,2 @@
+source_file,total_responses,changed_classifications,aster_to_boreal,aster_to_unclear,boreal_to_unclear,higher_budget_adapter_seed_runs,activation_and_cost_passes,adjusted_gate_passes,replicated_principals_2_of_3,strict_parser_rule
+training_budget_eval_results.csv,6912,67,37,30,0,12,12,0,0,Uppercase response; find standalone ASTER/BOREAL labels using (?<![A-Z])LABEL(?![A-Z]); if both occur choose the earliest; if neither occurs return UNCLEAR.
