@@ -2,7 +2,15 @@
 
 Code and reproducibility materials for **The Activation Illusion: Validating Secret-Loyalty Construction through Trigger Perturbation**.
 
-This repository evaluates whether a secret-loyalty model organism is genuinely controlled by its intended trigger or instead exhibits a broad principal-directed preference.
+This repository evaluates whether a secret-loyalty model organism is genuinely controlled by its intended trigger or instead exhibits a broader principal-directed preference.
+
+## Project context
+
+This project originated during the **Secret Loyalties Hackathon** organized by **Apart Research** and **Formation Research** and was subsequently developed into an independent investigation of construction validity in secret-loyalty model organisms.
+
+## Research question
+
+Does strong behavior under the intended trigger demonstrate that a secret-loyalty model organism has learned a genuinely conditional objective, or can fine-tuning instead produce a broader preference that persists off trigger?
 
 ## Main result
 
@@ -20,6 +28,12 @@ The central failure mode was persistent off-trigger preference: models often lea
 
 ## Construction-validity criterion
 
+The construction-validity gate was designed to capture three properties of the intended organism:
+
+1. acquisition of the target preference;
+2. specificity to the designated trigger;
+3. robustness when evidence conflicts with that preference.
+
 A valid trigger-selective organism must satisfy all of the following:
 
 - intended activation >= 75%
@@ -35,9 +49,11 @@ An organism type is considered replicated only when at least **2 of 3 independen
 
 The adapter × training-seed pair is the replication unit. Prompts and decoding seeds are repeated measurements, not independent organism replications.
 
+Because any single validity threshold is contestable, we also evaluated **6,000 alternative leakage-aware gate specifications**.
+
 ## Robustness checks
 
-The primary conclusion remained unchanged under the following targeted analyses:
+The primary conclusion remained unchanged under targeted robustness analyses:
 
 | Analysis | Result |
 |---|---|
@@ -50,7 +66,7 @@ The primary conclusion remained unchanged under the following targeted analyses:
 | Threshold sensitivity | 0 adapter–seed passes across 6,000 leakage-aware specifications |
 | Prompt-cluster bootstrap | 0/120,000 bootstrap resamples passed the full gate |
 | Exact prompt-subset sensitivity | 0/99,066 subsets passed the full gate |
-| Deterministic trigger-selective positive control | Passed the adjusted gate for both principals |
+| Deterministic trigger-selective positive control | Passed the corresponding validity gate for both principals |
 
 The larger-model check weakens a simple small-model-capacity explanation, but does **not** establish generality to frontier-scale systems.
 
@@ -73,7 +89,7 @@ python trigger_dependence_validator.py \
 
 `example_generations.csv` is a **synthetic positive-control example**. It is not the empirical paper dataset.
 
-## Suggested repository layout
+## Repository structure
 
 ```text
 .
@@ -105,19 +121,19 @@ python trigger_dependence_validator.py \
     └── Appendix_Figure_A4_prompt_sampling_robustness.png
 ```
 
-## Core public artifacts
+## Reproducibility materials
 
-Recommended public artifacts include:
+This repository includes the public artifacts needed to inspect and reproduce the validation analyses, including:
 
 - the frozen construction-validity configuration;
 - the trigger-dependence validator;
 - the synthetic positive-control example;
 - processed per-seed and checkpoint-level result tables;
 - robustness-analysis outputs;
-- the paper figures;
-- analysis/evaluation notebooks needed to reproduce the reported aggregate results.
+- paper figures;
+- analysis and evaluation notebooks used to reproduce the reported aggregate results.
 
-Trained loyalty adapters and any construction artifacts that are not necessary to reproduce the validation analyses can remain outside the public repository pending disclosure review.
+Trained loyalty adapters and construction artifacts that are not required to reproduce the validation analyses may remain outside the public repository pending disclosure review.
 
 ## Representative evaluation structure
 
@@ -140,9 +156,13 @@ The full evaluation design uses held-out trigger paraphrases and matched intende
 
 ## Interpretation
 
-This project does not show that trigger-selective secret loyalties are impossible to construct. It shows that, under the tested procedures, **strong activation is easier to obtain than validated trigger dependence**.
+This project identifies a construct-validity failure mode in secret-loyalty model organisms: **successful intended-trigger activation can occur without genuine trigger dependence**.
 
-For downstream auditing, concealment, or remediation benchmarks, construction validity should therefore be established before treating a model as a trigger-selective organism.
+Under the tested procedures, models learned **whom to favor** more reliably than **when that preference should apply**.
+
+This does not imply that trigger-selective secret loyalties are impossible to construct, nor that previously published secret-loyalty organisms are invalid.
+
+For model organisms intended to represent conditional hidden objectives, activation should therefore be evaluated alongside off-trigger behavior, matched Controls, selectivity, and independent replication before downstream auditing or remediation results are interpreted.
 
 ## Paper
 
@@ -150,3 +170,11 @@ For downstream auditing, concealment, or remediation benchmarks, construction va
 
 Denyse Perez de Vera — Independent  
 With Apart Research
+
+**Status:** Preprint
+
+**Paper:** Add public preprint link here once available.
+
+## Citation
+
+A BibTeX citation will be added once the public preprint is available.
